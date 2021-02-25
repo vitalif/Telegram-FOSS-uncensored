@@ -2205,9 +2205,11 @@ public class MessageObject {
     }
 
     public void measureInlineBotButtons() {
+        /*
         if (isRestrictedMessage) {
             return;
         }
+        */
         wantedBotKeyboardWidth = 0;
         if (messageOwner.reply_markup instanceof TLRPC.TL_replyInlineMarkup || messageOwner.reactions != null && !messageOwner.reactions.results.isEmpty()) {
             Theme.createChatResources(null, true);
@@ -2718,7 +2720,11 @@ public class MessageObject {
             }
         } else {
             isRestrictedMessage = false;
-            if (!isMediaEmpty()) {
+            String restrictionReason = MessagesController.getRestrictionReason(messageOwner.restriction_reason);
+            /*if (!TextUtils.isEmpty(restrictionReason)) {
+                messageText = restrictionReason;
+                isRestrictedMessage = true;
+            } else*/ if (!isMediaEmpty()) {
                 if (messageOwner.media instanceof TLRPC.TL_messageMediaDice) {
                     messageText = getDiceEmoji();
                 } else if (messageOwner.media instanceof TLRPC.TL_messageMediaPoll) {
@@ -2757,7 +2763,7 @@ public class MessageObject {
                 } else if (messageOwner.media instanceof TLRPC.TL_messageMediaInvoice) {
                     messageText = messageOwner.media.description;
                 } else if (messageOwner.media instanceof TLRPC.TL_messageMediaUnsupported) {
-                    messageText = LocaleController.getString("UnsupportedMedia", R.string.UnsupportedMedia).replace("https://telegram.org/update","https://github.com/Telegram-FOSS-Team/Telegram-FOSS/blob/master/Update.md");
+                    messageText = LocaleController.getString("UnsupportedMedia", R.string.UnsupportedMedia);
                 } else if (messageOwner.media instanceof TLRPC.TL_messageMediaDocument) {
                     if (isSticker() || isAnimatedStickerDocument(getDocument(), true)) {
                         String sch = getStickerChar();

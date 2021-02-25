@@ -1,6 +1,3 @@
-# Uncensored version of [Telegram-FOSS](https://github.com/Telegram-FOSS-Team/Telegram-FOSS)
-Restriction stubs removed for channels
-
 [![Releases](https://img.shields.io/github/release/Telegram-FOSS-Team/Telegram-FOSS.svg)](https://github.com/Telegram-FOSS-Team/Telegram-FOSS/releases/latest)
 [![Discussions](https://img.shields.io/badge/Offtopics-Telegram-blue.svg)](https://t.me/tfossofftop)
 
@@ -39,6 +36,7 @@ This version of Telegram is available on FDroid:
 - [anupritaisno1](https://github.com/anupritaisno1)
 - [nekohasekai](https://github.com/nekohasekai)
 - [kdrag0n](https://github.com/kdrag0n)
+- [terachad](https://github.com/terachad)
 
 ## Discussion
 
@@ -68,6 +66,7 @@ You can also join `#telegram-foss:matrix.org` via [matrix](https://matrix.to/#/#
 - Allow to set a proxy before login
 - Added the ability to parse locations from intents containing a `geo:<lat>,<lon>,<zoom>` string
 - Force static map previews from Telegram
+- No content restrictions
 
 ## Versioning
 

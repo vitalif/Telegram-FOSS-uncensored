@@ -6,7 +6,8 @@
 - Enjoy improved TalkBack support.
 - Report fake groups or channels impersonating famous people or organizations.
 - View the complete list of changes in-app or on our blog.
-
+- **Telegram FOSS:**
+  - Lifting content restrictions due to Play Store, thanks to [terachad](https://github.com/terachad)
 
 ### v.7.3.1
 - Turn any of your group chats into a hop-on, hop-off conference call with up to several thousand participants.
