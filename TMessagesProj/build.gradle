@@ -3,7 +3,6 @@ apply plugin: 'com.android.application'
 repositories {
     mavenCentral()
     google()
-    jcenter()
 }
 
 configurations {
@@ -15,9 +14,9 @@ configurations.all {
 }
 
 dependencies {
-    implementation 'androidx.core:core:1.3.2'
+    implementation 'androidx.core:core:1.6.0'
     implementation 'androidx.palette:palette:1.0.0'
-    implementation 'androidx.exifinterface:exifinterface:1.3.2'
+    implementation 'androidx.exifinterface:exifinterface:1.3.3'
     implementation 'androidx.interpolator:interpolator:1.0.0'
     implementation 'androidx.viewpager:viewpager:1.0.0'
     implementation 'androidx.dynamicanimation:dynamicanimation:1.0.0'
@@ -28,9 +27,9 @@ dependencies {
     compileOnly 'org.checkerframework:checker-compat-qual:2.5.0'
     implementation 'com.googlecode.mp4parser:isoparser:1.0.6'
     implementation 'com.stripe:stripe-android:2.0.2'
-    implementation 'org.osmdroid:osmdroid-android:6.1.8'
+    implementation 'org.osmdroid:osmdroid-android:6.1.10'
 
-    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.1'
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
 }
 
 //return an api key from a properties file.
@@ -46,9 +45,9 @@ def getAppHash(){
 }
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion '30.0.3'
-    ndkVersion "21.1.6352462"
+    compileSdkVersion 31
+    buildToolsVersion '31.0.0'
+    ndkVersion "21.4.7075529"
 
     defaultConfig.applicationId = "org.telegram.messenger"
 
@@ -130,6 +129,16 @@ android {
             ndk.debugSymbolLevel = 'FULL'
         }
 
+        standalone {
+            debuggable false
+            jniDebuggable false
+            applicationIdSuffix ".web"
+            minifyEnabled true
+            multiDexEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            ndk.debugSymbolLevel = 'FULL'
+        }
+
         release {
             debuggable false
             jniDebuggable false
@@ -151,6 +160,10 @@ android {
 
     sourceSets.HA {
         manifest.srcFile 'config/debug/AndroidManifest.xml'
+    }
+
+    sourceSets.standalone {
+        manifest.srcFile 'config/release/AndroidManifest.xml'
     }
 
     sourceSets.release {
@@ -229,9 +242,6 @@ android {
             sourceSets.debug {
                 manifest.srcFile 'config/debug/AndroidManifest_SDK23.xml'
             }
-            /*sourceSets.debugAsan {
-                manifest.srcFile 'config/debug/AndroidManifest_SDK23.xml'
-            }*/
             sourceSets.release {
                 manifest.srcFile 'config/release/AndroidManifest_SDK23.xml'
             }
@@ -257,16 +267,16 @@ android {
         }
         afat {
             ndk {
-                abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+                abiFilters "armeabi-v7a", "arm64-v8a"
             }
             sourceSets.debug {
                 manifest.srcFile 'config/debug/AndroidManifest_SDK23.xml'
             }
-            /*sourceSets.debugAsan {
-                manifest.srcFile 'config/debug/AndroidManifest_SDK23.xml'
-            }*/
             sourceSets.release {
                 manifest.srcFile 'config/release/AndroidManifest_SDK23.xml'
+            }
+            sourceSets.standalone {
+                manifest.srcFile 'config/release/AndroidManifest_standalone.xml'
             }
             ext {
                 abiVersionCode = 9
@@ -274,7 +284,7 @@ android {
         }
     }
 
-    defaultConfig.versionCode = 2227
+    defaultConfig.versionCode = 2432
 
     applicationVariants.all { variant ->
         variant.outputs.all { output ->
@@ -292,7 +302,7 @@ android {
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 29
-        versionName "7.4.2"
+        versionName "8.1.2"
 
         vectorDrawables.generatedDensities = ['mdpi', 'hdpi', 'xhdpi', 'xxhdpi']
         //obtain your own keys at https://core.telegram.org/api/obtaining_api_id
@@ -303,6 +313,13 @@ android {
             cmake {
                 version '3.10.2'
                 arguments '-DANDROID_STL=c++_static', '-DANDROID_PLATFORM=android-16', "-j=16"
+                if (project.hasProperty("armeabi-v7a")) {
+                    abiFilters 'armeabi-v7a'
+                } else if (project.hasProperty("arm64-v8a")) {
+                    abiFilters 'arm64-v8a'
+                } else {
+                    abiFilters 'armeabi-v7a', 'arm64-v8a'
+                }
             }
         }
     }

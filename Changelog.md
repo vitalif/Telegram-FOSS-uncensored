@@ -1,3 +1,60 @@
+### v.8.1.2
+Chat Themes, Interactive Emoji, Group Read Receipts and Live Stream Recording
+- Choose one of 8 new colorful themes for any individual private chat.
+- Tap on animated emoji like :fireworks:, :balloon: or :pile_of_poo: to launch fullscreen effects that are synced if both chat partners are watching.
+- See who recently viewed your outgoing messages in small groups.
+- Record video from live broadcasts in groups and channels.
+- View the complete list of changes in-app or on our blog.
+
+### v.8.0.0
+Live Streams, Flexible Forwarding, Jump to Next Channel and More
+- Live Stream to an unlimited number of viewers in groups and channels.
+- Preview messages before forwarding, remove captions or sender names.
+- Scroll through channels you follow without going back to the chat list.
+- See larger thumbnails when scrolling the sticker set bar in the panel.
+- Trending Stickers are now shown above 'Recently Used'.
+- View the complete list of changes in-app or on our blog.
+
+### v.7.9.3
+- Group Video Calls support up to 1000 video viewers.
+- 0.5x, 1.5x and 2x playback speeds are available for videos in the media player.
+- Video Messages record in higher quality and you can tap to expand them. Music keeps playing while you record, and you can pinch to zoom when using the rear camera.
+- Screen sharing includes device audio and is now available in 1-on-1 video calls.
+- Auto-delete timer now has a '1 month' option.
+- View the complete list of changes in-app or on our blog.
+
+### v.7.8.0
+Group Video Calls and Animated Backgrounds
+- Turn on video or share your screen during Voice Chats in any group
+- Video chat with up to 30 people at once (more soon) on any device
+- Use multicolor animated backgrounds that swirl with each message
+- Create custom animated backgrounds in Chat Settings
+- Get dozens of cool animated backgrounds in Chat Settings > Change Chat Background
+- Watch your stickers and emoji fly into chats
+
+### v.7.7.2
+No changelog provided.
+
+### v.7.6.0
+Voice Chats 2.0: Channels, Millions of Listeners, Recorded Chats, Admin Tools
+- Start voice chats in channels, with no limits on the number of listeners
+- Record voice chats
+- See user bios in the list of participants
+- Raise a hand to show admins you want to speak
+- Create invite links for listeners or speakers
+- Join as a channel to hide your personal account
+- Customize the left swipe action on chats: Pin, Read, Archive, Mute or Delete
+- View the complete list of changes in-app or on our blog.
+
+### v.7.5.0
+Auto-Delete, Widgets, Expiring Invite Links, and More
+- Set messages to auto-delete for everyone 24 hours or 7 days after sending.
+- Create invite links that work for a limited time or a limited number of uses.
+- Access your chats quickly with Home Screen Widgets.
+- Convert groups into Broadcast Groups with unlimited members.
+- Keep the original sending date when moving chat history from other apps.
+- View the complete list of changes in-app or on our blog.
+
 ### v.7.4.2
 - Move your message history from other apps such as WhatsApp and KakaoTalk to Telegram.
 - Delete groups you created, secret chats, and call history for all sides, without a trace.
@@ -17,7 +74,6 @@
 - Enjoy new animations for the “New message” button, user profiles, chat folders and message counters.
 - View the complete list of changes in-app or on our blog.
 
-
 ### v.7.2.1
 Pinned Messages 2.0, Improved Live Locations, Playlists and More
 - Pin several messages in any chat
@@ -27,7 +83,6 @@ Pinned Messages 2.0, Improved Live Locations, Playlists and More
 - View detailed statistics about the performance of individual posts in your channels
 - Tap the brush button when viewing a photo to edit it and send it back
 - View the complete list of changes in-app or on our blog
-
 
 ### v.7.1.3
 Search Filters, Anonymous Admins, Channel Comments and More

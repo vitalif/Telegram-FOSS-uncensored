@@ -82,6 +82,7 @@ function build_one {
 	--enable-decoder=alac \
 	--enable-demuxer=mov \
 	--enable-demuxer=gif \
+	--enable-demuxer=ogg \
 	--enable-hwaccels \
 	$ADDITIONAL_CONFIGURE_FLAG
 

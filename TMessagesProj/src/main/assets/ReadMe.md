@@ -1,4 +1,4 @@
-Emoji files are sprite sheets generated with TelegramEmojiGenerator [1].
+Emoji files are generated with TelegramEmojiGenerator [1].
 
 They contain visual assets from Twemoji [2].
 

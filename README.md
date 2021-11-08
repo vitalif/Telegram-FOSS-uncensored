@@ -37,6 +37,7 @@ This version of Telegram is available on FDroid:
 - [nekohasekai](https://github.com/nekohasekai)
 - [kdrag0n](https://github.com/kdrag0n)
 - [terachad](https://github.com/terachad)
+- [ppnplus](https://github.com/ppnplus)
 
 ## Discussion
 
